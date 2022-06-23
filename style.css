@@ -1,0 +1,38 @@
+/** {
+    margin: 0;
+    padding: 0;
+    
+}*/
+
+body {
+    background-color:;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 992px;
+    line-height:2; 
+    
+}
+h1 {
+    color: blue;
+    text-align: center;
+}
+h2 {
+    color: darkorange;
+    text-align: center;
+}
+strong {
+    color:rgb(122, 237, 8);
+}
+.texto {
+    margin-left:-50px ;
+}
+.texto1 {
+    margin-left:-10px;
+}
+p {
+    color: darkviolet;
+    margin-left: 30px;
+}
+li {
+    color: blue;
+    margin-left: 30px;
+}

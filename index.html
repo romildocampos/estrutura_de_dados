@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de dados do Javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Estrutura de dados do Javascript</h1>
+    <ul>
+        <li>JavaScript é uma linguagem de tipagem dinâmica. Isso significa que você não necessita declarar o tipo de uma variável antes de sua atribuição. O tipo será automaticamente determinado quando o programa for processado. Isso também significa que você pode reatribuir uma mesma variável com um tipo diferente:</li>
+    </ul>
+    <h2>Tipos de Dados</h2>
+    <p>Sete tipos de dados são : Primitivos.</p>
+    <ul>
+        <li>Boolean</li>
+        <ul>
+        <li>Boolean representa uma entidade lógica e pode ter dois valores: verdadeiro(true) ou falso(false).</li>
+        </ul>
+        <li>Null</li>
+        <uL type="1">
+            <li>O tipo Null tem exatamente um valor: null(nulo). Veja null e Null para mais detalhes.</li>
+        </uL>
+        <li>Undefined</li>
+        <ul>
+            <li>Uma variável que não foi atribuída a um valor específico, assume o valor undefined(indefinido). Veja undefined e Undefined para mais detalhes.</li>
+        </ul>
+        <li>Number</li>
+        <ul>
+            <li>um tipo específico para inteiros. Além de poderem representar números de ponto-flutuante, o tipo number possui três valores simbólicos: +Infinity, -Infinity, e NaN (não numérico).
+
+            </li>
+        </ul>
+        <li>BigInt</li>
+        <li>String</li>
+        <ul>
+            <li>O tipo String em JavaScript é usado para representar dados textuais. Isto é um conjunto de "elementos" de valores de 16-bits unsigned integer. Cada elemento na string ocupa uma posição na string. O primeiro elemento está no índice 0, o próximo no índice 1, e assim por diante. O comprimento de uma string é o número de elementos nela.
+
+            </li>
+        </ul>
+        <li>Symbol</li>
+        <ul>
+            <li>Symbols são novos no JavaScript ECMAScript edição 6. Um Symbol é um valor primitivo único e imutável e pode ser usado como chave de uma propriedade de Object (ver abaixo). em algumas linguagens de programação, Symbols são chamados de atoms (átomos). Você também pode compará-los à enumerações nomeadas (enum) em C. Para mais detalhes veja Symbol e o Symbol object wrapper em JavaScript.</li>
+        </ul>
+        <li>Objeto</li>
+        <ul>
+            <li>Na ciência da computação, um objeto é um valor na memória que pode ser possivelmente referenciado por um identifier.Existem dois tipos de propriedades de objetos que contém certos atributos: a propriedade de dados e a propriedade de acesso.</li>
+            <ol>
+                <li>Propriedade de Dados(Associa uma chave com um valor )</li>
+                <li>Propriedade de acesso - (Associa uma chave com uma ou duas funções de acesso (get e set) para retornar ou armazenar um valor )</li>
+            </ol>
+        </ul>
+    </ul>
+    <h2>Valores Primitivos</h2>
+    <p>Todos os tipos, com a exceção de objetos, definem valores imutáveis (valores que são incapazes de mudar). Por exemplo e diferentemente da linguagem C, Strings são imutáveis. Nós nos referimos a valores desse tipo como "valores primitivos".</p>
+    <h2>Funções e objetos "normais"</h2>
+    <p>Um objeto do JavaScript é um mapeamento entre chaves e valores. Chaves são Strings e valores podem ser de qualquer tipo. Isso faz com que objetos sejam perfeitos para hashmaps.</p>
+    <h2>Coleções indexadas: Arrays e Arrays tipados</h2>
+    <p><strong>Arrays</strong> são objetos comuns nos quais existe uma relação particular entre propriedades de chaveamento inteiro e a propriedade 'length'. Além disso, arrays herdam de Array.prototype que nos dá vários metodos úteis para manipulação de arrays. Por exemplo, indexOf (procura um valor no array) ou push (adiciona um valor no array), etc. Isso faz com que os Arrays sejam candidatos perfeitos para representação de listas e conjuntos.</p>
+    <h1>Sintaxe e tipos</h1>
+    <p>Declarações de variáveis, tipos de dados e literais</p>
+    <h2>Sintaxe Básica</h2>
+    <p>No JavaScript, instruções são chamadas de declaração e são separadas por um ponto e vírgula (;). Espaços, tabulação e uma nova linha são chamados de espaços em branco. O código fonte dos scripts em JavaScript são lidos da esquerda para a direita e são convertidos em uma sequência de elementos de entrada como simbolos, caracteres de controle, terminadores de linha, comentários ou espaço em branco. ECMAScript também define determinadas palavras-chave e literais, e tem regras para inserção automática de ponto e vírgula (ASI) para terminar as declarações. No entanto, recomenda-se sempre adicionar ponto e vírgula no final de suas declarações; isso evitará alguns imprevistos. Para obter mais informações, consulte a referência detalhada sobre a gramática léxica do JavaScript.</p>
+    <h2>Declarações</h2>
+    <p>Existem três tipos de declarações em JavaScript.</p>
+    <ol>
+        <li>Var - Declara uma variável, opcionalmente, inicializando-a com um valor.</li>
+        <li>Let - Declara uma variável local de escopo do bloco, opcionalmente, inicializando-a com um valor.</li>
+        <li>Const - Declara uma constante de escopo de bloco, apenas de leitura.</li>
+    </ol>
+    <h2>Variáveis</h2>
+    <p>Você usa variáveis como nomes simbólicos para os valores em sua aplicação. O nome das variáveis, chamados de identificadores, obedecem determinadas regras.</p>
+    <p>Um identificador JavaScript deve começar com uma letra, underline (_), ou cifrão ($); os caracteres subsequentes podem também ser números (0-9). Devido JavaScript ser case-sensitive, letras incluem caracteres de "A" a "Z" (maiúsculos) e caracteres de "a" a "z" (minúsculos).</p>
+    <h2>Declarando variáveis</h2>
+    <p>Você pode declarar uma variável de três formas:</p>
+    <ul>
+        <li>Com a palavra chave var. Por exemplo, var x = 42. Esta sintaxe pode ser usada para declarar tanto variáveis locais como variáveis globais.</li>
+        <li>Por simples adição de valor. Por exemplo, x = 42. Isso declara uma variável global. Essa declaração gera um aviso de advertência no JavaScript. Você não deve usar essa variante.</li>
+        <li>Com a palavra chave let. Por exemplo, let y = 13. Essa sintaxe pode ser usada para declarar uma variável local de escopo de bloco. Veja escopo de variável abaixo.</li>
+    </ul>
+    <h2>Classificando variáveis</h2>
+    <p>Uma variável declarada usando a declaração var ou let sem especificar o valor inicial tem o valor  undefined.</p><br>
+    <p>Uma tentativa de acessar uma variável não declarada resultará no lançamento de uma exceção ReferenceError:</p><br>
+    <p>O valor undefined se comporta como falso (false), quando usado em um contexto booleano</p><br>
+    <p>O valor undefined converte-se para NaN quando usado no contexto numérico.</p><br>
+    <p>Quando você avalia uma variável nula, o valor nulo se comporta como 0 em contextos numéricos e como falso em contextos booleanos.</p>
+    <h2>Escopo de variável</h2>
+    <p>Quando você declara uma váriavel <strong>fora de qualquer função, ela é chamada de variável global</strong>, porque está disponível para qualquer outro código no documento atual. Quando você declara uma <strong>variável dentro de uma função, é chamada de variável local</strong>,  pois ela está disponível somente dentro dessa função.</p>
+    <h2>Variável de elevação</h2>
+    <p>Outra coisa incomum sobre variáveis em JavaScript é que <strong>você pode utilizar a variável e declará-la depois, sem obter uma exceção. Este conceito é conhecido como hoisting;</strong> variáveis em JavaScript são num sentido "hoisted" ou lançada para o topo da função ou declaração. No entanto, as variáveis que são "hoisted" retornarão um valor undefined. Então, mesmo se você usar ou referir a variável e depois declará-la e inicializá-la, ela ainda retornará undefined.</p>
+    <h2>Variáveis Globais</h2>
+    <p><strong>Variáveis globais são propriedades do objeto global.</strong> Em páginas web o objeto global é a window, assim você pode configurar e acessar variáveis globais utilizando a sintaxe window.variavel. </p>
+    <p>Consequentemente, você pode acessar variáveis globais declaradas em uma janela ou frame ou frame de outra janela. Por exemplo, se uma variável chamada phoneNumber é declarada em um documento, você pode consultar esta variável de um frame como parent.phoneNumber.</p>
+    <h2>Constantes</h2>
+    <p>Você pode criar uma constante apenas de leitura por meio da palavra-chave const. A sintaxe de um identificador de uma constante é semelhante ao identificador de uma variável: deve começar com uma letra, sublinhado ou cifrão e pode conter caractere alfabético, numérico ou sublinhado.</p><br>
+    <p>Uma constante não pode alterar seu valor por meio de uma atribuição ou ser declarada novamente enquanto o script está em execução. Deve ser inicializada com um valor.</p><br>
+    <p>As regras de escopo para as constantes são as mesmas para as váriaveis let de escopo de bloco. Se a palavra-chave const for omitida, presume-se que o identificador represente uma variável.</p><br>
+    <p>Você não pode declarar uma constante com o mesmo nome de uma função ou variável que estão no mesmo escopo.</p>
+    <h2>Conversão de tipos de dados</h2>
+    <p>JavaScript é uma linguagem dinamicamente tipada. Isso significa que você não precisa especificar o tipo de dado de uma variável quando declará-la, e tipos de dados são convertidos automaticamente conforme a necessidade durante a execução do script. Então, por exemplo, você pode definir uma variável da seguinte forma:</p>
+    <h2>Convertendo strings para números</h2>
+    <p>No caso de um valor que representa um número está armazenado na memória como uma string, existem métodos para a conversão.</p>
+    <ul>
+        <li>parseInt()</li>
+        <ul>
+            <li><strong>parseInt </strong>irá retornar apenas números inteiros, então seu uso é restrito para a casa dos decimais. Além disso, é uma boa prática ao usar parseInt incluir o parâmetro da base. O parâmetro da base é usado para especificar qual sistema númerico deve ser usado. <br>Uma método alternativo de conversão de um número em forma de string é com o operador + (operador soma)(0.1,2...-20)</li>
+        </ul>
+        <li>parseFloat()</li>
+        <ul>
+            <li><strong>parsFloat</strong> irá retornar apenas números inteiros (1,2...10,..-1,-2)</li>
+        </ul>
+    </ul>
+    <h2>Literais</h2>
+    <p>Você usa literais para representar valores em JavaScript. Estes são valores fixados, não variáveis, que você literalmente insere em seu script. Esta seção descreve os seguintes tipos literais:</p>
+    <ul>
+        <li>Array Literal</li>
+        <ul>
+            <li>Um array literal é uma lista de zero ou mais expressões, onde cada uma delas representam um elemento do array, inseridas entre colchetes ([]). Quando você cria um array usando um array literal, ele é inicializado  com os valores especificados como seus elementos, e seu comprimento é definido com o  número de elementos especificados</li>
+    <p class="texto">O exemplo a seguir cria um array coffees com três elementos e um comprimento de três:</p>
+            <strong>var coffees</strong> = ["French Roast", "Colombian", "Kona"];
+        </ul>
+        <li>Literais Boolean</li>
+        <ul>
+    <p class="texto"> O tipo Boolean tem dois valores literal: true e false.</p>
+            <li>Não confunda os valores primitivos Boolean true e false com os valores true e false do objeto Boolean. O objeto Boolean é um invólucro em torno do tipo de dado primitivo. Veja Boolean para mais informação.</li>
+        </ul>
+        <li>Literais ponto flutuantes</li>
+    <p class="texto1">Um literal de ponto flutuante pode ter as seguintes partes:</p>
+        <ul>
+            <li>Um inteiro decimal que pode ter sinal (precedido por "+" ou "-"),</li>
+            <li>Um ponto decimal ("."),</li>
+            <li>Uma fração (outro número decimal),</li>
+            <li>Um expoente.</li>
+    <p class="texto">O expoente é um "e" ou "E" seguido por um inteiro, que pode ter sinal (precedido por "+" ou "-"). Um literal de ponto flutuante  deve ter no mínimo um dígito e um ponto decimal ou "e" (ou "E").</p>
+        </ul>
+        <li>Inteiros</li>
+        <ul>
+    <p class="texto">Inteiros podem ser expressos em decimal (base 10), hexadecimal (base 16), octal (base 8) e binário (base 2).</p>
+            <ul>
+                <li>Decimal inteiro literal consiste em uma sequência de dígitos sem um 0 (zero).
+                </li>
+                <li>0 (zero) em um inteiro literal indica que ele está em octal. Octal pode incluir somente os dígitos 0-7.</li>
+                <li>0x (ou 0X) indica um hexadecimal. Inteiros hexadecimais podem incluir dígitos (0-9) e as letras a-f e A-F.</li>
+                <li>0b (ou 0B) indica um binário. Inteiros binário podem incluir apenas os dígitos 0 e 1.
+                </li>
+            </ul>
+        </ul>
+        <li>Objeto literal</li>
+        <ul>
+            <li>Um objeto literal é uma lista de zero ou mais pares de nomes de propriedades e valores associados de um objeto, colocado entre chaves ({}). Você não deve usar um objeto literal no início de uma declaração. Isso levará a um erro ou não se comportará conforme o esperado, porque o { será interpretado como início de um bloco.</li>
+        </ul>
+        <li>String literal</li>
+        <ul>
+            <li>Uma string literal são zero ou mais caracteres dispostos em aspas duplas (") ou aspas simples ('). Uma sequência de caracteres deve ser delimitada por aspas do mesmo tipo; ou seja,  as duas aspas simples ou ambas aspas duplas. A seguir um exemplo de strings literais.</li>
+        </ul>
+        </ul>
+        <h2>Uso de caracteres especiais em string</h2>
+        <p>Além dos caracteres comuns, você também pode incluir caracteres especiais em strings</p>
+</body>
+</html>
